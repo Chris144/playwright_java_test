@@ -19,3 +19,9 @@ tests:
     paths:
       - screenshots/
     expire_in: 7 days
+    artifacts:
+      when: always
+      paths:
+        - screenshots/
+        - target/surefire-reports/
+
