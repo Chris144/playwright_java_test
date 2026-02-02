@@ -4,24 +4,20 @@ stages:
   - test
 
 variables:
-  MAVEN_OPTS: "-Dmaven.repo.local=.m2"
+  MAVEN_OPTS: "-Dmaven.repo.local=.m2/repository"
 
 cache:
   paths:
-    - .m2/
+    - .m2/repository
 
-tests:
+playwright-tests:
   stage: test
   script:
     - mvn clean test -Dheadless=true
   artifacts:
     when: always
     paths:
-      - screenshots/
+      - target/surefire-reports
+      - screenshots
+      - target/allure-results
     expire_in: 7 days
-    artifacts:
-      when: always
-      paths:
-        - screenshots/
-        - target/surefire-reports/
-
