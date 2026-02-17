@@ -9,10 +9,7 @@ import utils.Locators;
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 public class TestPasswordRequired extends BaseTest{
-    @Epic("Autoryzacja")
-    @Feature("Logowanie")
     @Test
-    @Description("Sprawdzenie komunikatu 'Password is required'")
     public void testPasswordRequired(){
         openUrl(Locators.URL);
         LoginPage loginPage = new LoginPage(page);
