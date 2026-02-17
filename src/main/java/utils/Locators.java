@@ -9,5 +9,6 @@ public class Locators
     public static final String BTN_PRODUCT =".btn";
     public static final String CART = ".shopping_cart_link";
     public static final String PRODUCT_ADDED = ".cart_item";
+    public static final String ErrorPassword = ("[data-test='error']");
     
 }

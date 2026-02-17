@@ -1,11 +1,6 @@
 package pl.qa;
-import com.microsoft.playwright.APIResponse;
-import com.microsoft.playwright.Locator;
 import org.junit.jupiter.api.Test;
 import utils.Locators;
-
-import java.awt.image.PixelGrabber;
-
 import static com.microsoft.playwright.assertions.PlaywrightAssertions.assertThat;
 
 // Logowanie do systemu

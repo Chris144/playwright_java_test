@@ -20,7 +20,7 @@ public class BaseTest {
     @BeforeEach
     public void setup() {
         playwright = Playwright.create();
-        boolean headless = Boolean.parseBoolean(System.getProperty("headless", "true"));
+        boolean headless = Boolean.parseBoolean(System.getProperty("headless", "false"));
         browser = playwright.chromium().launch(new BrowserType.LaunchOptions().setHeadless(headless));
 
         page = browser.newPage();
